@@ -13,7 +13,7 @@ export const SingleMovie = () => {
   return (
     <>
       <StyledSingleMovieWrapper>
-        {/* <Hero resourceId={id} resourceType={type} /> */}
+        <Hero resourceId={id} resourceType={type} />
       </StyledSingleMovieWrapper>
       <Movies>
         <StyledMoviesTitle>Cast</StyledMoviesTitle>

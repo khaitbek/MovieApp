@@ -48,6 +48,8 @@ export const StyledHeaderWrapper = styled.div`
     display:flex;
     align-items:center;
     justify-content:space-between;
+    gap:2rem;
+    flex-wrap:wrap;
 `
 
 export const StyledSearchForm = styled.form`
@@ -88,10 +90,17 @@ export const StyledHero = styled.section`
 
 export const StyledHeroTitle = styled.div`
     margin-bottom:36px;
-    font-size: 112px;
+    font-size: 22px;
     line-height: 90%;
     letter-spacing: -0.02em;
     color: #FFFFFF;
+    @media screen and (min-width:967px){
+        font-size:80px;
+    }
+
+    @media screen and (min-width:1240px){
+        font-size:112px;
+    }
 `
 
 export const StyledHeroOuter = styled.div`

@@ -18,17 +18,7 @@ export const Header = () => {
           <StyledNavList>
             <StyledNavItem>
               <StyledNavLink to="/">
-                All
-              </StyledNavLink>
-            </StyledNavItem>
-            <StyledNavItem>
-              <StyledNavLink to="/tv">
-                TV SHOW
-              </StyledNavLink>
-            </StyledNavItem>
-            <StyledNavItem>
-              <StyledNavLink to="/movie">
-                Movie
+                Movie App
               </StyledNavLink>
             </StyledNavItem>
           </StyledNavList>
