@@ -24,7 +24,7 @@ export const Header = () => {
           </StyledNavList>
 
           <StyledSearchForm onSubmit={e => e.preventDefault()}>
-            <StyledSearchBar onChange={inputHandler} ref={inputRef}  type="search" required/>
+            <StyledSearchBar onChange={inputHandler} ref={inputRef} aria-label="search for movies" placeholder="search for movies"  type="search" required/>
             <StyledSearchButton type="button">Search</StyledSearchButton>
           </StyledSearchForm>
         </StyledHeaderWrapper>
