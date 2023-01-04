@@ -1,7 +1,7 @@
+import React from 'react'
 import { Hero } from "@/components/Hero"
 import { Movies } from "@/components/Movies";
 import { StyledMoviesTitle } from "@/styles/components";
-import React from 'react'
 import { useParams } from "react-router-dom"
 import { MovieList } from "@components/MovieList";
 import { Cast } from "@/components/Cast";

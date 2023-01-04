@@ -1,7 +1,7 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 import { Link, NavLink } from "react-router-dom";
 import { IMG_URL } from "@/API/api";
-import { motion } from "framer-motion";
 
 // Container
 export const Container = styled.div`
@@ -10,7 +10,6 @@ export const Container = styled.div`
     margin: 0 auto;
     padding: 0 20px;
 `
-
 // Header
 export const StyledHeader = styled.header`
     margin-top:75px;
@@ -204,7 +203,9 @@ export const StyledMovieList = styled(motion.ul)`
     margin-bottom:4rem;
 `
 
+
 export const StyledMovieItem = styled(motion.li)`
+    position:relative;
     flex-shrink:0;
     max-width:300px;
     border:2px solid transparent;
@@ -217,8 +218,26 @@ export const StyledMovieItem = styled(motion.li)`
     }
     &:focus{
         border-color:#fff;
-   
-   }
+    }
+    &:focus, &:hover button{
+        display:block;
+    }
+
+`
+
+export const StyledMovieButton = styled.button`
+    position:absolute;
+    top:50%;
+    width:80%;
+    left:10%;
+    right:10%;
+    display:none;
+    padding:1rem 2rem;
+    font-size:2rem;
+    color:white;
+    background:#FFE24B;
+    transform:translateY(-50%);
+    border-radius:10px;
 `
 
 export const StyledMovieItemWrapper = styled(motion.div)`

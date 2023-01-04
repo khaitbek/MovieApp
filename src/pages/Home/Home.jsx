@@ -4,11 +4,10 @@ import { MovieList } from "@components/MovieList";
 import { GlobalStyles } from "@/styles/default";
 import { Movies } from "@/components/Movies/index";
 import { StyledMoviesTitle } from "@/styles/components";
-import { Routes, Route, Outlet } from "react-router-dom"
+import { Routes, Route } from "react-router-dom"
 import { SingleMovie } from "../SingleMovie/SingleMovie";
 import { Player } from "@/components/Player/player";
 import { SingleActor } from "../SingleActor/singleActor";
-import { ActorContextProvider } from "@/context/ActorContext";
 import { Search } from "../Search/Search";
 
 

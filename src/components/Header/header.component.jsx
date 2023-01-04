@@ -1,5 +1,5 @@
-import { Container, StyledHeader, StyledHeaderWrapper, StyledNavItem, StyledNavLink, StyledNavList, StyledSearchBar, StyledSearchButton, StyledSearchForm } from "@/styles/components"
 import React, { useRef } from 'react'
+import { Container, StyledHeader, StyledHeaderWrapper, StyledNavItem, StyledNavLink, StyledNavList, StyledSearchBar, StyledSearchButton, StyledSearchForm } from "@styles/components"
 import { debounce } from "../../utilities/debounce";
 import { useNavigate, useParams } from "react-router-dom";
 

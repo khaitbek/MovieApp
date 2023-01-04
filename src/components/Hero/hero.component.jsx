@@ -13,7 +13,7 @@ export const Hero = ({ resourceId, resourceType }) => {
             const currentMovieData = await getSingleResourceBy(resourceType, resourceId);
             const { backdrop_path, id, original_title, name, overview, popularity, poster_path, release_date, runtime, vote_average, imdb_id } = currentMovieData.data;
             setCurrentMovie({
-                backdrop_path, id, imdb_id, original_title, name, overview, popularity, poster_path, release_date, runtime, vote_average, imdb_id
+                backdrop_path, id, original_title, name, overview, popularity, poster_path, release_date, runtime, vote_average, imdb_id
             });
             setError(false);
         } catch (error) {

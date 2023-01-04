@@ -1,11 +1,8 @@
-import { searchResources } from "@/API/api";
-import { Container, StyledHero, StyledHeroSpan, StyledHeroTitle, StyledMovieImage, StyledMovieItem, StyledMovieList } from "@/styles/components";
 import React, { useMemo, useState } from 'react'
-import { useParams } from "react-router-dom";
-import { StyledHeroText } from "../../styles/components";
-import { IMG_URL } from "../../API/api";
-import { useNavigate } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import ReactPaginate from "react-paginate";
+import { searchResources, IMG_URL } from "@/API/api";
+import { Container, StyledHero, StyledHeroText, StyledHeroSpan, StyledHeroTitle, StyledMovieImage, StyledMovieItem, StyledMovieList } from "@styles/components";
 
 export const Search = () => {
     const [searchMovieData, setSearchMovieData] = useState({});
@@ -13,10 +10,8 @@ export const Search = () => {
     const navigate = useNavigate();
 
     useMemo(async () => {
-        console.log(searchMovieData.page);
         const searchMovieResults = await searchResources("movie", query, searchMovieData.page);
         setSearchMovieData({ page: searchMovieResults.data.page, totalPages: searchMovieResults.data.total_pages, movies: searchMovieResults.data.results });
-        console.log(searchMovieResults);
     }, [query, searchMovieData.page]);
 
     return (
