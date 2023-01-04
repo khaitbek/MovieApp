@@ -18,6 +18,7 @@ export const StyledCastList = styled(motion.ul)`
 `
 
 export const StyledCastItem = styled(motion.li)`
+    position:relative;
     flex-shrink:0;
     max-width:300px;
     border:2px solid transparent;
@@ -32,6 +33,9 @@ export const StyledCastItem = styled(motion.li)`
         border-color:#fff;
    
    }
+    &:focus, &:hover button{
+        display:block;
+    }
 `
 
 export const StyledCastItemWrapper = styled(motion.div)`

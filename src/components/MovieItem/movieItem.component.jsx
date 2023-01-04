@@ -9,7 +9,7 @@ export const MovieItem = ({ id, poster_path,type, title, description }) => {
   return (
     <StyledMovieItem tabIndex={0} key={id} title={`${title}. ${description}`} >
       <StyledMovieImage src={`${IMG_URL}/${poster_path}`}width={300} height={300}  load="lazy" alt={`${title}.${description}`} />
-      <StyledMovieButton onClick={() => navigate(`/${type}/${id}`)}>Watch</StyledMovieButton>
+      <StyledMovieButton onClick={() => navigate(`/${type}/${id}`)}>See more</StyledMovieButton>
     </StyledMovieItem>
   )
 }
