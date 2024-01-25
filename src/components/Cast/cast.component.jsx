@@ -1,10 +1,8 @@
-import { getResourceBy } from "@/API/api";
-import { StyledCarousel, StyledMovieList } from "@/styles/components"
-import React, { useEffect, useMemo, useRef, useState } from 'react'
-import { MovieItem } from "@components/MovieItem";
+import { StyledCarousel } from "@/app/styles/components";
+import { Actor } from "@components/Actor";
+import { useMemo, useRef, useState } from 'react';
 import { getCast } from "../../API/api";
 import { StyledCastList } from "./styles";
-import { Actor } from "@components/Actor";
 
 export const Cast = ({ movieId, resourceType }) => {
   const [cast, setCast] = useState([]);
@@ -30,7 +28,7 @@ export const Cast = ({ movieId, resourceType }) => {
   return <StyledCarousel ref={carousel}>
     <StyledCastList drag="x" dragConstraints={{ right: 0, left: -((cast.length - 2) * 278) }} tabIndex={0}>
       {cast.map(actor => {
-        const { identifier, id, profile_path,name } = actor;
+        const { identifier, id, profile_path, name } = actor;
         return <Actor id={id} img={profile_path} name={name} key={crypto.randomUUID()} />
       })}
     </StyledCastList>

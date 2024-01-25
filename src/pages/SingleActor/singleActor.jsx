@@ -1,14 +1,14 @@
 import { getSingleActor } from "@/API/api";
-import React, { useContext, useEffect, useMemo, useState } from 'react'
-import { useParams } from "react-router-dom";
-import { Movies } from "@/components/Movies";
-import { StyledHeroText, StyledHeroTitle, StyledMoviesTitle } from "@/styles/components";
+import { StyledHeroText, StyledHeroTitle } from "@/app/styles/components";
 import { MovieList } from "@/components/MovieList/index";
-import { ActorContext } from "../../context/ActorContext";
+import { Movies } from "@/components/Movies";
+import { useContext, useMemo } from 'react';
+import { useParams } from "react-router-dom";
+import { ActorContext } from "../../entities/actor/model/store/ActorContext";
 
 export const SingleActor = () => {
-  const {actor, setActor} = useContext(ActorContext);
-  const {id} = useParams();
+  const { actor, setActor } = useContext(ActorContext);
+  const { id } = useParams();
 
   useMemo(async () => {
     try {
@@ -18,7 +18,7 @@ export const SingleActor = () => {
     } catch (error) {
       console.log(error);
     }
-  },[])
+  }, [])
 
   return (
     <Movies>

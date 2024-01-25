@@ -1,20 +1,18 @@
 import { getActorMovies, getResourceBy } from "@/API/api";
-import { StyledCarousel, StyledMovieList } from "@/styles/components"
-import React, { useContext, useEffect, useMemo, useRef, useState } from 'react'
-import { MovieItem } from "../MovieItem/movieItem.component";
-import { ActorContext } from "../../context/ActorContext";
+import { StyledCarousel, StyledMovieList } from "@/app/styles/components";
+import { useMemo, useRef, useState } from 'react';
 import { useParams } from "react-router-dom";
-import { MovieContext } from "../../context/MovieContext";
+import { MovieItem } from "../MovieItem/movieItem.component";
 
 export const MovieList = ({ type, resource }) => {
-  const [movies,setMovies] = useState([]);
+  const [movies, setMovies] = useState([]);
   const [isError, setError] = useState([]);
   const [isLoading, setLoading] = useState([]);
   const { id } = useParams();
   const carousel = useRef();
 
   useMemo(async () => {
-    if(movies.length !== 0) return;
+    if (movies.length !== 0) return;
     try {
       let resources = null;
       if (resource === "person") {

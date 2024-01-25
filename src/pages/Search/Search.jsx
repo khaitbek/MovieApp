@@ -1,8 +1,8 @@
-import React, { useMemo, useState } from 'react'
-import { useParams, useNavigate } from "react-router-dom";
+import { IMG_URL, searchResources } from "@/API/api";
+import { Container, StyledHero, StyledHeroSpan, StyledHeroText, StyledMovieImage, StyledMovieItem, StyledMovieList } from "@/app/styles/components";
+import { useMemo, useState } from 'react';
 import ReactPaginate from "react-paginate";
-import { searchResources, IMG_URL } from "@/API/api";
-import { Container, StyledHero, StyledHeroText, StyledHeroSpan, StyledHeroTitle, StyledMovieImage, StyledMovieItem, StyledMovieList } from "@styles/components";
+import { useNavigate, useParams } from "react-router-dom";
 
 export const Search = () => {
     const [searchMovieData, setSearchMovieData] = useState({});
@@ -21,17 +21,17 @@ export const Search = () => {
                     <StyledHeroText style={{ marginBlock: 0, display: "block" }}>
                         Showing results for
                         <StyledHeroSpan>
-                            "{query.replaceAll("+"," ")}"
+                            "{query.replaceAll("+", " ")}"
                         </StyledHeroSpan>
                     </StyledHeroText>
                 </Container>
             </StyledHero>
             <Container>
-                <ReactPaginate containerClassName="pagination-container" pageRangeDisplayed={3} pageCount={searchMovieData.totalPages || 0} previousLabel="&#8592;" nextLabel="&#8594;" onPageChange={(e)=> {
+                <ReactPaginate containerClassName="pagination-container" pageRangeDisplayed={3} pageCount={searchMovieData.totalPages || 0} previousLabel="&#8592;" nextLabel="&#8594;" onPageChange={(e) => {
                     setSearchMovieData(prevData => {
-                        return {...prevData, page:e.selected}
+                        return { ...prevData, page: e.selected }
                     })
-                } } />
+                }} />
             </Container>
             {searchMovieData.movies && <StyledMovieList style={{ gridAutoFlow: "row", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 300px))", justifyContent: "center", paddingTop: 50 }}>
                 {searchMovieData.movies.map(movie => {

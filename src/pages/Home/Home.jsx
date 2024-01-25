@@ -1,14 +1,13 @@
-import React from 'react'
+import { StyledMoviesTitle } from "@/app/styles/components";
+import { GlobalStyles } from "@/app/styles/default";
+import { Movies } from "@/components/Movies/index";
+import { Player } from "@/components/Player/player";
 import { Hero } from "@components/Hero";
 import { MovieList } from "@components/MovieList";
-import { GlobalStyles } from "@/styles/default";
-import { Movies } from "@/components/Movies/index";
-import { StyledMoviesTitle } from "@/styles/components";
-import { Routes, Route } from "react-router-dom"
-import { SingleMovie } from "../SingleMovie/SingleMovie";
-import { Player } from "@/components/Player/player";
-import { SingleActor } from "../SingleActor/singleActor";
+import { Route, Routes } from "react-router-dom";
 import { Search } from "../Search/Search";
+import { SingleActor } from "../SingleActor/singleActor";
+import { SingleMovie } from "../SingleMovie/SingleMovie";
 
 
 export const Home = () => {

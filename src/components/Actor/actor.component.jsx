@@ -1,8 +1,7 @@
-import React from 'react'
-import { StyledCastImage, StyledCastItem, StyledCastName } from "../Cast/styles"
-import { IMG_URL } from "@/API/api"
+import { IMG_URL } from "@/API/api";
+import { StyledMovieButton } from "@/app/styles/components";
 import { useNavigate } from "react-router-dom";
-import { StyledMovieButton } from "@/styles/components";
+import { StyledCastImage, StyledCastItem, StyledCastName } from "../Cast/styles";
 
 export const Actor = ({ id, img, name }) => {
   const navigate = useNavigate();

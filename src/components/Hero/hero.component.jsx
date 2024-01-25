@@ -1,8 +1,6 @@
-import React, { useEffect, useMemo, useState } from 'react'
-import { Container, StyledHero, StyledHeroAddBtn, StyledHeroBtnContainer, StyledHeroDarkBtns, StyledHeroOuter, StyledHeroText, StyledHeroTitle, StyledHeroTrailerBtn, StyledHeroWatchBtn, StyledHeroWrapper, StyledHeroYear } from "@/styles/components";
-import { BASE_API, API_KEY, getFetch, getSingleMovie, getSingleResourceBy } from "@/API/api";
-import { formatDate } from "@/utilities/dateFormatter";
-import { Player } from "@/components/Player/player";
+import { getSingleResourceBy } from "@/API/api";
+import { Container, StyledHero, StyledHeroAddBtn, StyledHeroBtnContainer, StyledHeroDarkBtns, StyledHeroOuter, StyledHeroText, StyledHeroTitle, StyledHeroTrailerBtn, StyledHeroWatchBtn, StyledHeroWrapper, StyledHeroYear } from "@/app/styles/components";
+import { useMemo, useState } from 'react';
 
 export const Hero = ({ resourceId, resourceType }) => {
     const [currentMovie, setCurrentMovie] = useState({});

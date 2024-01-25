@@ -1,12 +1,9 @@
-import React from 'react'
-import { Hero } from "@/components/Hero"
-import { Movies } from "@/components/Movies";
-import { StyledMoviesTitle } from "@/styles/components";
-import { useParams } from "react-router-dom"
-import { MovieList } from "@components/MovieList";
+import { StyledMoviesTitle } from "@/app/styles/components";
 import { Cast } from "@/components/Cast";
+import { Hero } from "@/components/Hero";
+import { Movies } from "@/components/Movies";
+import { useParams } from "react-router-dom";
 import { StyledSingleMovieWrapper } from "./styles";
-import { Player } from "@/components/Player";
 
 export const SingleMovie = () => {
   const { type, id } = useParams();

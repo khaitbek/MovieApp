@@ -1,7 +1,7 @@
-import styled from "styled-components";
-import { motion } from "framer-motion";
-import { Link, NavLink } from "react-router-dom";
 import { IMG_URL } from "@/API/api";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import styled from "styled-components";
 
 // Container
 export const Container = styled.div`
@@ -9,6 +9,7 @@ export const Container = styled.div`
     max-width:1240px;
     margin: 0 auto;
     padding: 0 20px;
+    
 `
 // Header
 export const StyledHeader = styled.header`
